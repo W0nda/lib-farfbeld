@@ -1,16 +1,9 @@
 #include "farbfeld.h"
 #include "ffstruct.h"
+#include "util.h"
 #include <unistd.h>
 #include <stdlib.h>
 #include <fcntl.h>
-
-int reverseEndianness(int val)
-{
-    return (val << 24) |
-          ((val <<  8) & 0x00ff0000) |
-          ((val >>  8) & 0x0000ff00) |
-          ((val >> 24) & 0x000000ff);
-}
 
 void ffstruct2ff(ffstruct *ffstruct, char *filename){
 	int foutput = open(filename, O_WRONLY);

@@ -242,3 +242,13 @@ strtonum(const char *numstr, long long minval, long long maxval,
 
 	return (ll);
 }
+
+
+int
+reverseEndianness(int val)
+{
+    return (val << 24) |
+          ((val <<  8) & 0x00ff0000) |
+          ((val >>  8) & 0x0000ff00) |
+          ((val >> 24) & 0x000000ff);
+}

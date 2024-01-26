@@ -27,3 +27,5 @@ void *ereallocarray(void *optr, size_t nmemb, size_t size);
 #undef strtonum
 long long strtonum(const char *, long long, long long, const char **);
 long long estrtonum(const char *, long long, long long);
+
+int reverseEndianness(int val);
